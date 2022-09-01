@@ -104,6 +104,10 @@ class Type{
 	 * @param {?Iterable<Type>} attributes.faces - типы, интерфейс которых поддерживается данным типом, 
 	 *		если задан template, то он должен быть среди них
 	 *
+	 * @param {?Function<(Type), (Type|null)>) attributes.getFace - функция, реализующая дополнительные проверки поддержки интерфейса
+	 *		принимает типы, перечисленные в attributes.faces, возвращает точный тип, интерфейс которого поддерживается, или null, если данный 
+	 *		дженерик не поддерживает данный интерфейс
+	 *
 	 * @param {boolean} attributes.isAbstract - признак абстрактного типа
 	 * @param {?Function<(string, ...params), any>} attributes.parse - функция парсинга значения типа, может бросать SyntaxError при ошибке парсинга
 	 * @param {?Function<(...any), any>} attributes.create - функция генерации значения из переданных аргументов

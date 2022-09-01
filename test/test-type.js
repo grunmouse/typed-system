@@ -145,7 +145,7 @@ describe('Type', ()=>{
 			
 		});
 		
-		describe('implements tuple', ()=>{
+		describe('paramImplements', ()=>{
 			it('(int, byte) implements (number, byte)', ()=>{
 				assert.ok(Type.paramImplements([Int, Byte], [Number, Byte]));
 			});
