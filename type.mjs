@@ -303,4 +303,6 @@ class Type{
 Type.paramEqual = paramEqual;
 Type.paramImplements = paramImplements;
 
-module.exports = Type;
+//module.exports = Type;
+
+export default Type;

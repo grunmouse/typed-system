@@ -1,4 +1,4 @@
-const Type = require('./type.js');
+import  Type  from './type.mjs';
 
 /**
  * @class TypedFunction
@@ -31,4 +31,4 @@ function TypedFunction(type, value){
 	return me;
 }
 
-module.exports = TypedFunction;
+export default TypedFunction;

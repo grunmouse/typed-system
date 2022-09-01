@@ -1,4 +1,4 @@
-const Type = require('./type.js');
+import Type from './type.mjs';
 
 const NumberType = new Type({
 	name:'NumberType',
@@ -37,4 +37,4 @@ const NumberType = new Type({
 	}
 });
 
-module.exports = NumberType;
+export default NumberType;

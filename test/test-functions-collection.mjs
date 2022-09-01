@@ -1,8 +1,9 @@
-const assert = require('assert');
-const Type = require('../type.js');
-const TypedFunction = require('../typed-function.js');
-const FunctionsCollection = require('../functions-collection.js');
+import  assert  from 'assert';
+import  Type  from '../type.mjs';
+import  TypedFunction  from '../typed-function.mjs';
+import  FunctionsCollection  from '../functions-collection.mjs';
 
+const me = ()=>{
 describe('FunctionsCollection', ()=>{
 	const NumberType = new Type({
 		name:'Number',
@@ -193,3 +194,17 @@ describe('FunctionsCollection', ()=>{
 		
 	});
 });
+};
+
+import * as url from 'node:url';
+import * as Path from 'node:path';
+
+if (import.meta.url.startsWith('file:')) { // (A)
+  const modulePath = url.fileURLToPath(import.meta.url);
+  const mainPath = Path.join(process.cwd(), process.argv[2]);
+  if (modulePath === mainPath) { // (B)
+    me();
+  }
+}
+
+export default me;

@@ -1,8 +1,15 @@
+	import a from './test-type.mjs';
+	import b from './test-typed-function.mjs';
+	import c from './test-multifunction.mjs';
+	import d from './test-functions-collection.mjs';
+	import e from './test-number-type.mjs';
+	import f from './test-lib.mjs';
+
 describe('typed', ()=>{
-	require('./test-type.js');
-	require('./test-typed-function.js');
-	require('./test-multifunction.js');
-	require('./test-functions-collection.js');
-	require('./test-number-type.js');
-	require('./test-lib.js');
+		a();
+		b();
+		c();
+		d();
+		e();
+		f();
 });

@@ -1,7 +1,8 @@
-const assert = require('assert');
-const Type = require('../type.js');
-const TypedFunction = require('../typed-function.js');
+import  assert  from 'assert';
+import  Type  from '../type.mjs';
+import  TypedFunction  from '../typed-function.mjs';
 
+const me=()=>{
 describe('TypedFunction', ()=>{
 	const Number = new Type({name:'Number', isAbstract:true});
 	const Int = new Type({
@@ -83,3 +84,17 @@ describe('TypedFunction', ()=>{
 		});
 	});
 });
+};
+
+import * as url from 'node:url';
+import * as Path from 'node:path';
+
+if (import.meta.url.startsWith('file:')) { // (A)
+  const modulePath = url.fileURLToPath(import.meta.url);
+  const mainPath = Path.join(process.cwd(), process.argv[2]);
+  if (modulePath === mainPath) { // (B)
+    me();
+  }
+}
+
+export default me;

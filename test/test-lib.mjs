@@ -1,8 +1,8 @@
-const lib = require('../lib.js');
-const assert = require('assert');
-const sinon = require('sinon');
+import  lib  from '../lib.mjs';
+import  assert  from 'assert';
+import  sinon  from 'sinon';
 
-const Type = require('../type.js');
+import  Type  from '../type.mjs';
 
 function assertTyped(actual, required){
 	if(required){
@@ -14,7 +14,7 @@ function assertTyped(actual, required){
 		assert.ok(typeof actual === 'undefined', 'undefined');
 	}
 }
-
+const me = ()=>{
 describe('typed functions library', ()=>{
 	describe('basic', ()=>{
 		it('exist library', ()=>{
@@ -128,3 +128,16 @@ describe('typed functions library', ()=>{
 
 	
 });
+};
+import * as url from 'node:url';
+import * as Path from 'node:path';
+
+if (import.meta.url.startsWith('file:')) { // (A)
+  const modulePath = url.fileURLToPath(import.meta.url);
+  const mainPath = Path.join(process.cwd(), process.argv[2]);
+  if (modulePath === mainPath) { // (B)
+    me();
+  }
+}
+
+export default me;

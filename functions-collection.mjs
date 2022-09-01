@@ -1,4 +1,4 @@
-const Multifunction = require('./multifunction.js');
+import  Multifunction  from './multifunction.mjs';
 
 /**
  * @class FunctionsCollection
@@ -86,4 +86,4 @@ class FunctionsCollection{
 	}
 }
 
-module.exports = FunctionsCollection;
+export default  FunctionsCollection;

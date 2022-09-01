@@ -1,6 +1,6 @@
-const TypedFunction = require('./typed-function.js');
+import  TypedFunction  from './typed-function.mjs';
 
-const Type = require('./type.js');
+import  Type  from './type.mjs';
 
 class SpecMap{
 	constructor(){
@@ -86,4 +86,4 @@ function Multifunction(){
 	return run;
 }
 
-module.exports = Multifunction;
+export default  Multifunction;

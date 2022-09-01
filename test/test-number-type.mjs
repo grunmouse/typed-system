@@ -1,7 +1,8 @@
-const assert = require('assert');
-const Type = require('../type.js');
-const NumberType = require('../number-type.js');
+import assert from 'assert';
+import Type from '../type.mjs';
+import NumberType from '../number-type.mjs';
 
+const me=()=>{
 describe('NumberType', ()=>{
 	describe('instance', ()=>{
 		it('exist', ()=>{
@@ -74,3 +75,17 @@ describe('NumberType', ()=>{
 
 	});
 });
+};
+
+import * as url from 'node:url';
+import * as Path from 'node:path';
+
+if (import.meta.url.startsWith('file:')) { // (A)
+  const modulePath = url.fileURLToPath(import.meta.url);
+  const mainPath = Path.join(process.cwd(), process.argv[2]);
+  if (modulePath === mainPath) { // (B)
+    me();
+  }
+}
+
+export default me;

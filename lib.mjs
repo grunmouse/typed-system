@@ -10,7 +10,7 @@ const forval2 = (func)=>(a, b)=>(func(a.value, b.value));
 const sameType = (a)=>(a.type);
 const secondType = (_, b)=>(b.type);
 
-const TypedFunction = require('./typed-function.js');
+import  TypedFunction  from './typed-function.mjs';
 
 
 const withSameType = [
@@ -28,7 +28,7 @@ const withSameType = [
 
 const math1 = (func)=>TypedFunction(sameType, forval1(func));
 
-module.exports = {
+export default  {
 	/**
 	 * forval - функции, оборавичающие переданную функцию, таким образом, что на вход последней 
 	 *	передаются значения свойства value от соответствуюзих аргументов функции-обёртки
