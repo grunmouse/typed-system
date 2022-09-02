@@ -1,12 +1,14 @@
-import TypedFunction from './typed-function.js';
+import TypedFunction from './typed-function.mjs';
 
-import Multifunction from './multifunction.js';
+import Multifunction from './multifunction.mjs';
 
-import FunctionsCollection from './functions-collection.js';
+import FunctionsCollection from './functions-collection.mjs';
+
+import library from './lib.mjs';
 
 export default  {
 	FunctionsCollection,
 	TypedFunction,
 	Multifunction,
-	library : require('./lib.js')
+	library
 };

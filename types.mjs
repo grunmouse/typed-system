@@ -1,7 +1,7 @@
-import Type from '../type.mjs';
-import NumberType from '../number-type.mjs';
+import Type from './type.mjs';
+import NumberType from './number-type.mjs';
 
-export default = {
+export default {
 	Type,
 	NumberType
 };
