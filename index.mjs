@@ -9,4 +9,4 @@ import functions from './functions.mjs';
 export default  {
 	types,
 	functions
-}
+};
